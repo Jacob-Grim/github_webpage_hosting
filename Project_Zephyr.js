@@ -1241,11 +1241,11 @@ function updateGlobalBufferAndViews(buf) {
 }
 
 var STATIC_BASE = 1024,
-    STACK_BASE = 12893984,
+    STACK_BASE = 14253280,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 7651104,
-    DYNAMIC_BASE = 12893984,
-    DYNAMICTOP_PTR = 7650912;
+    STACK_MAX = 9010400,
+    DYNAMIC_BASE = 14253280,
+    DYNAMICTOP_PTR = 9010208;
 
 assert(STACK_BASE % 16 === 0, 'stack must start aligned');
 assert(DYNAMIC_BASE % 16 === 0, 'heap must start aligned');
@@ -1771,7 +1771,7 @@ var ASM_CONSTS = {
 
 
 
-// STATICTOP = STATIC_BASE + 7650080;
+// STATICTOP = STATIC_BASE + 9009376;
 /* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
 
 
@@ -1950,7 +1950,7 @@ var ASM_CONSTS = {
   
       var pointer = ___cxa_is_pointer_type(throwntype);
       // can_catch receives a **, add indirection
-      var buffer = 7651072;
+      var buffer = 9010368;
       HEAP32[((buffer)>>2)]=thrown;
       thrown = buffer;
       // The different catch blocks are denoted by different types.
@@ -1987,7 +1987,7 @@ var ASM_CONSTS = {
   
       var pointer = ___cxa_is_pointer_type(throwntype);
       // can_catch receives a **, add indirection
-      var buffer = 7651072;
+      var buffer = 9010368;
       HEAP32[((buffer)>>2)]=thrown;
       thrown = buffer;
       // The different catch blocks are denoted by different types.
@@ -7206,7 +7206,7 @@ var ASM_CONSTS = {
     }
 
   function _emscripten_get_sbrk_ptr() {
-      return 7650912;
+      return 9010208;
     }
 
   
@@ -11413,10 +11413,10 @@ var ASM_CONSTS = {
     }
 
   
-  var ___tm_current=7650928;
+  var ___tm_current=9010224;
   
   
-  var ___tm_timezone=(stringToUTF8("GMT", 7650976, 4), 7650976);
+  var ___tm_timezone=(stringToUTF8("GMT", 9010272, 4), 9010272);
   
   function _tzset() {
       // TODO: Use (malleable) environment variables instead of system settings.
