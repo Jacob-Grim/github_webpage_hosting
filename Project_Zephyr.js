@@ -639,8 +639,8 @@ var wasmMemory;
 // In the wasm backend, we polyfill the WebAssembly object,
 // so this creates a (non-native-wasm) table for us.
 var wasmTable = new WebAssembly.Table({
-  'initial': 10823,
-  'maximum': 10823 + 0,
+  'initial': 10852,
+  'maximum': 10852 + 0,
   'element': 'anyfunc'
 });
 
@@ -1241,11 +1241,11 @@ function updateGlobalBufferAndViews(buf) {
 }
 
 var STATIC_BASE = 1024,
-    STACK_BASE = 14253280,
+    STACK_BASE = 14255328,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 9010400,
-    DYNAMIC_BASE = 14253280,
-    DYNAMICTOP_PTR = 9010208;
+    STACK_MAX = 9012448,
+    DYNAMIC_BASE = 14255328,
+    DYNAMICTOP_PTR = 9012256;
 
 assert(STACK_BASE % 16 === 0, 'stack must start aligned');
 assert(DYNAMIC_BASE % 16 === 0, 'heap must start aligned');
@@ -1771,7 +1771,7 @@ var ASM_CONSTS = {
 
 
 
-// STATICTOP = STATIC_BASE + 9009376;
+// STATICTOP = STATIC_BASE + 9011424;
 /* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
 
 
@@ -1950,7 +1950,7 @@ var ASM_CONSTS = {
   
       var pointer = ___cxa_is_pointer_type(throwntype);
       // can_catch receives a **, add indirection
-      var buffer = 9010368;
+      var buffer = 9012416;
       HEAP32[((buffer)>>2)]=thrown;
       thrown = buffer;
       // The different catch blocks are denoted by different types.
@@ -1987,7 +1987,7 @@ var ASM_CONSTS = {
   
       var pointer = ___cxa_is_pointer_type(throwntype);
       // can_catch receives a **, add indirection
-      var buffer = 9010368;
+      var buffer = 9012416;
       HEAP32[((buffer)>>2)]=thrown;
       thrown = buffer;
       // The different catch blocks are denoted by different types.
@@ -7206,7 +7206,7 @@ var ASM_CONSTS = {
     }
 
   function _emscripten_get_sbrk_ptr() {
-      return 9010208;
+      return 9012256;
     }
 
   
@@ -11413,10 +11413,10 @@ var ASM_CONSTS = {
     }
 
   
-  var ___tm_current=9010224;
+  var ___tm_current=9012272;
   
   
-  var ___tm_timezone=(stringToUTF8("GMT", 9010272, 4), 9010272);
+  var ___tm_timezone=(stringToUTF8("GMT", 9012320, 4), 9012320);
   
   function _tzset() {
       // TODO: Use (malleable) environment variables instead of system settings.
