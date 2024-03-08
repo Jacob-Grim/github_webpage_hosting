@@ -12510,8 +12510,8 @@ var ___get_exception_message = Module["___get_exception_message"] = createExport
 var ___cxa_can_catch = createExportWrapper("__cxa_can_catch");
 /** @type {function(...*):?} */
 var ___cxa_is_pointer_type = createExportWrapper("__cxa_is_pointer_type");
-var ___start_em_js = Module['___start_em_js'] = 14263216;
-var ___stop_em_js = Module['___stop_em_js'] = 14263698;
+var ___start_em_js = Module['___start_em_js'] = 14259056;
+var ___stop_em_js = Module['___stop_em_js'] = 14259538;
 function invoke_iii(index,a1,a2) {
   var sp = stackSave();
   try {
